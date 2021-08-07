@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- basic -->
+    <div class="total">
+      <h1 class="text-center">Bài tập cơ bản</h1>
+      <div class="container">
+        <div class="row">
+          <!-- bài tập 1 -->
+          <div class="col-6 py-5 bg-secondary">
+            <h1>Bài tập 1:</h1>
+            <h2>Sắp xếp các số nguyên</h2>
+            <div class="form-group">
+              <label for="number1">Số 1:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="number1"
+                placeholder="Nhập số"
+              />
+            </div>
+            <div class="form-group">
+              <label for="number2">Số 2:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="number2"
+                placeholder="Nhập số"
+              />
+            </div>
+            <div class="form-group">
+              <label for="number3">Số 3:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="number3"
+                placeholder="Nhập số"
+              />
+            </div>
+            <button type="button" class="btn btn-success" id="btnRange">
+              Sắp Xếp
+            </button>
+            <div class="mt-4 bg-white rounded">
+              <p id="txtRange" class="py-2">
+                <i class="fas fa-arrow-right"></i>
+              </p>
+            </div>
+          </div>
+          <!-- bài tập 2 -->
+          <div class="col-6 py-5 bg-warning">
+            <h1 class="text-white">Bài tập 2:</h1>
+            <h2 class="text-white">Chào hỏi thành viên trong gia đình</h2>
+            <label for="people">Chọn người trong gia đình : </label>
+            <select id="select" style="width: 100%; margin: 10px 0">
+              <option id="people" value="" selected>--Vui Lòng Chọn--</option>
+              <option id="dad" value="B">Bố</option>
+              <option id="mom" value="M">Mẹ</option>
+              <option id="brother" value="A">Anh Trai</option>
+              <option id="sister" value="E">Em Gái</option>
+            </select>
+            <button type="button" class="btn btn-success mt-4" id="btnHi">
+              Gởi Lời Chào
+            </button>
+            <div class="mt-4 bg-white rounded">
+              <p id="txtHi" class="py-2">
+                <i class="fas fa-arrow-right"></i>
+              </p>
+            </div>
+          </div>
+          <!-- bài tập 3 -->
+          <div class="col-6 mt-2 py-5 bg-primary">
+            <h1>Bài tập 3:</h1>
+            <h2>Tìm số lượng chẵn, lẻ</h2>
+            <div class="form-group">
+              <label for="number4">Số 1:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="number4"
+                placeholder="Nhập số"
+              />
+            </div>
+            <div class="form-group">
+              <label for="number5">Số 2:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="number5"
+                placeholder="Nhập số"
+              />
+            </div>
+            <div class="form-group">
+              <label for="number6">Số 3:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="number6"
+                placeholder="Nhập số"
+              />
+            </div>
+            <button type="button" class="btn btn-dark" id="btnResult">
+              Đếm
+            </button>
+            <div class="mt-4 bg-white rounded">
+              <p id="txtResult" class="py-2">
+                <i class="fas fa-arrow-right"></i>
+              </p>
+            </div>
+          </div>
+          <!-- bài tập 4 -->
+          <div class="col-6 mt-2 py-5 bg-info">
+            <h1>Bài tập 4:</h1>
+            <h2>Dự Đoán</h2>
+            <div class="form-group">
+              <label for="edge1">Độ dài cạnh 1:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="edge1"
+                placeholder="Nhập số"
+              />
+            </div>
+            <div class="form-group">
+              <label for="edge2">Độ dài cạnh 2:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="edge2"
+                placeholder="Nhập số"
+              />
+            </div>
+            <div class="form-group">
+              <label for="edge3">Độ dài cạnh 3:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="edge3"
+                placeholder="Nhập số"
+              />
+            </div>
+            <button type="button" class="btn btn-dark" id="btnGuess">
+              Dự Đoán
+            </button>
+            <div class="mt-4 bg-white rounded">
+              <p id="txtGuess" class="py-2">
+                <i class="fas fa-arrow-right"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/basic/BaiTap1.js"></script>
+    <script src="./js/basic/Baitap2.js"></script>
+    <script src="./js/basic/BaiTap3.js"></script>
+    <script src="./js/basic/Baitap4.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
