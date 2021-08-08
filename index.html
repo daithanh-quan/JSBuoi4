@@ -26,159 +26,562 @@
   </head>
   <body>
     <!-- basic -->
-    <div class="total">
-      <h1 class="text-center">Bài tập cơ bản</h1>
+    <div class="total py-3">
+      <h1 class="text-center py-2">Bài tập cơ bản</h1>
       <div class="container">
         <div class="row">
-          <!-- bài tập 1 -->
-          <div class="col-6 py-5 bg-secondary">
-            <h1>Bài tập 1:</h1>
-            <h2>Sắp xếp các số nguyên</h2>
-            <div class="form-group">
-              <label for="number1">Số 1:</label>
-              <input
-                type="number"
-                class="form-control"
-                id="number1"
-                placeholder="Nhập số"
-              />
-            </div>
-            <div class="form-group">
-              <label for="number2">Số 2:</label>
-              <input
-                type="number"
-                class="form-control"
-                id="number2"
-                placeholder="Nhập số"
-              />
-            </div>
-            <div class="form-group">
-              <label for="number3">Số 3:</label>
-              <input
-                type="number"
-                class="form-control"
-                id="number3"
-                placeholder="Nhập số"
-              />
-            </div>
-            <button type="button" class="btn btn-success" id="btnRange">
-              Sắp Xếp
-            </button>
-            <div class="mt-4 bg-white rounded">
-              <p id="txtRange" class="py-2">
-                <i class="fas fa-arrow-right"></i>
-              </p>
-            </div>
-          </div>
-          <!-- bài tập 2 -->
-          <div class="col-6 py-5 bg-warning">
-            <h1 class="text-white">Bài tập 2:</h1>
-            <h2 class="text-white">Chào hỏi thành viên trong gia đình</h2>
-            <label for="people">Chọn người trong gia đình : </label>
-            <select id="select" style="width: 100%; margin: 10px 0">
-              <option id="people" value="" selected>--Vui Lòng Chọn--</option>
-              <option id="dad" value="B">Bố</option>
-              <option id="mom" value="M">Mẹ</option>
-              <option id="brother" value="A">Anh Trai</option>
-              <option id="sister" value="E">Em Gái</option>
-            </select>
-            <button type="button" class="btn btn-success mt-4" id="btnHi">
-              Gởi Lời Chào
-            </button>
-            <div class="mt-4 bg-white rounded">
-              <p id="txtHi" class="py-2">
-                <i class="fas fa-arrow-right"></i>
-              </p>
+          <div class="col-sm-12 col-lg-3">
+            <div
+              class="nav flex-column nav-pills"
+              id="v-pills-tab"
+              role="tablist"
+              aria-orientation="vertical"
+            >
+              <a
+                class="nav-link active"
+                id="v-pills-home-tab"
+                data-toggle="pill"
+                href="#baiTap1"
+                role="tab"
+                aria-controls="v-pills-home"
+                aria-selected="true"
+                >Bài Tập 1</a
+              >
+              <a
+                class="nav-link"
+                id="v-pills-profile-tab"
+                data-toggle="pill"
+                href="#baiTap2"
+                role="tab"
+                aria-controls="v-pills-profile"
+                aria-selected="false"
+                >Bài Tập 2</a
+              >
+              <a
+                class="nav-link"
+                id="v-pills-messages-tab"
+                data-toggle="pill"
+                href="#baiTap3"
+                role="tab"
+                aria-controls="v-pills-messages"
+                aria-selected="false"
+                >Bài Tập 3</a
+              >
+              <a
+                class="nav-link"
+                id="v-pills-settings-tab"
+                data-toggle="pill"
+                href="#baiTap4"
+                role="tab"
+                aria-controls="v-pills-settings"
+                aria-selected="false"
+                >Bài tập 4</a
+              >
             </div>
           </div>
-          <!-- bài tập 3 -->
-          <div class="col-6 mt-2 py-5 bg-primary">
-            <h1>Bài tập 3:</h1>
-            <h2>Tìm số lượng chẵn, lẻ</h2>
-            <div class="form-group">
-              <label for="number4">Số 1:</label>
-              <input
-                type="number"
-                class="form-control"
-                id="number4"
-                placeholder="Nhập số"
-              />
-            </div>
-            <div class="form-group">
-              <label for="number5">Số 2:</label>
-              <input
-                type="number"
-                class="form-control"
-                id="number5"
-                placeholder="Nhập số"
-              />
-            </div>
-            <div class="form-group">
-              <label for="number6">Số 3:</label>
-              <input
-                type="number"
-                class="form-control"
-                id="number6"
-                placeholder="Nhập số"
-              />
-            </div>
-            <button type="button" class="btn btn-dark" id="btnResult">
-              Đếm
-            </button>
-            <div class="mt-4 bg-white rounded">
-              <p id="txtResult" class="py-2">
-                <i class="fas fa-arrow-right"></i>
-              </p>
-            </div>
-          </div>
-          <!-- bài tập 4 -->
-          <div class="col-6 mt-2 py-5 bg-info">
-            <h1>Bài tập 4:</h1>
-            <h2>Dự Đoán</h2>
-            <div class="form-group">
-              <label for="edge1">Độ dài cạnh 1:</label>
-              <input
-                type="number"
-                class="form-control"
-                id="edge1"
-                placeholder="Nhập số"
-              />
-            </div>
-            <div class="form-group">
-              <label for="edge2">Độ dài cạnh 2:</label>
-              <input
-                type="number"
-                class="form-control"
-                id="edge2"
-                placeholder="Nhập số"
-              />
-            </div>
-            <div class="form-group">
-              <label for="edge3">Độ dài cạnh 3:</label>
-              <input
-                type="number"
-                class="form-control"
-                id="edge3"
-                placeholder="Nhập số"
-              />
-            </div>
-            <button type="button" class="btn btn-dark" id="btnGuess">
-              Dự Đoán
-            </button>
-            <div class="mt-4 bg-white rounded">
-              <p id="txtGuess" class="py-2">
-                <i class="fas fa-arrow-right"></i>
-              </p>
+          <div class="col-sm-12 col-lg-9">
+            <div class="tab-content" id="v-pills-tabContent">
+              <!-- bài tập 1 -->
+              <div
+                class="tab-pane fade show active"
+                id="baiTap1"
+                role="tabpanel"
+                aria-labelledby="v-pills-home-tab"
+              >
+                <div class="py-5 px-5 bg-primary">
+                  <h1>Bài tập 1:</h1>
+                  <h2>Sắp xếp các số nguyên</h2>
+                  <div class="form-group">
+                    <label for="number1">Số 1:</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="number1"
+                      placeholder="Nhập số"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="number2">Số 2:</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="number2"
+                      placeholder="Nhập số"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="number3">Số 3:</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="number3"
+                      placeholder="Nhập số"
+                    />
+                  </div>
+                  <button type="button" class="btn btn-dark" id="btnRange">
+                    Sắp Xếp
+                  </button>
+                  <div class="mt-4 bg-white rounded" style="width: 50%">
+                    <p id="txtRange" class="py-2">
+                      <i class="fas fa-arrow-right"></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- bài tập 2 -->
+              <div
+                class="tab-pane fade"
+                id="baiTap2"
+                role="tabpanel"
+                aria-labelledby="v-pills-profile-tab"
+              >
+                <div class="py-5 px-5 bg-primary">
+                  <h1 class="text-white">Bài tập 2:</h1>
+                  <h2 class="text-white">Chào hỏi thành viên trong gia đình</h2>
+                  <label for="people">Chọn người trong gia đình : </label>
+                  <select id="select" style="width: 100%; margin: 10px 0">
+                    <option id="people" value="" selected>
+                      --Vui Lòng Chọn--
+                    </option>
+                    <option id="dad" value="B">Bố</option>
+                    <option id="mom" value="M">Mẹ</option>
+                    <option id="brother" value="A">Anh Trai</option>
+                    <option id="sister" value="E">Em Gái</option>
+                  </select>
+                  <button type="button" class="btn btn-dark mt-4" id="btnHi">
+                    Gởi Lời Chào
+                  </button>
+                  <div class="mt-4 bg-white rounded" style="width: 50%">
+                    <p id="txtHi" class="py-2">
+                      <i class="fas fa-arrow-right"></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- bài tập 3 -->
+              <div
+                class="tab-pane fade"
+                id="baiTap3"
+                role="tabpanel"
+                aria-labelledby="v-pills-messages-tab"
+              >
+                <div class="mt-2 px-5 py-5 bg-primary">
+                  <h1>Bài tập 3:</h1>
+                  <h2>Tìm số lượng chẵn, lẻ</h2>
+                  <div class="form-group">
+                    <label for="number4">Số 1:</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="number4"
+                      placeholder="Nhập số"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="number5">Số 2:</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="number5"
+                      placeholder="Nhập số"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="number6">Số 3:</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="number6"
+                      placeholder="Nhập số"
+                    />
+                  </div>
+                  <button type="button" class="btn btn-dark" id="btnResult">
+                    Đếm
+                  </button>
+                  <div class="mt-4 bg-white rounded" style="width: 50%">
+                    <p id="txtResult" class="py-2">
+                      <i class="fas fa-arrow-right"></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- bài tập 4 -->
+              <div
+                class="tab-pane fade"
+                id="baiTap4"
+                role="tabpanel"
+                aria-labelledby="v-pills-settings-tab"
+              >
+                <div class="mt-2 px-5 py-5 bg-primary">
+                  <h1>Bài tập 4:</h1>
+                  <h2>Dự Đoán</h2>
+                  <div class="form-group">
+                    <label for="edge1">Độ dài cạnh 1:</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="edge1"
+                      placeholder="Nhập số"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="edge2">Độ dài cạnh 2:</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="edge2"
+                      placeholder="Nhập số"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="edge3">Độ dài cạnh 3:</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="edge3"
+                      placeholder="Nhập số"
+                    />
+                  </div>
+                  <button type="button" class="btn btn-dark" id="btnGuess">
+                    Dự Đoán
+                  </button>
+                  <div class="mt-4 bg-white rounded" style="width: 50%">
+                    <p id="txtGuess" class="py-2">
+                      <i class="fas fa-arrow-right"></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
+    <!-- advance -->
+    <div class="container py-5">
+      <h1 class="text-center py-2">Bài Tập Nâng Cao</h1>
+      <div class="row">
+        <div class="col-sm-12 col-lg-3">
+          <div
+            class="nav flex-column nav-pills"
+            id="v-pills-tab"
+            role="tablist"
+            aria-orientation="vertical"
+          >
+            <a
+              class="nav-link active"
+              id="v-pills-home-tab"
+              data-toggle="pill"
+              href="#v-pills-home"
+              role="tab"
+              aria-controls="v-pills-home"
+              aria-selected="true"
+              >Bài tập 5</a
+            >
+            <a
+              class="nav-link"
+              id="v-pills-profile-tab"
+              data-toggle="pill"
+              href="#v-pills-profile"
+              role="tab"
+              aria-controls="v-pills-profile"
+              aria-selected="false"
+              >Bài tập 6</a
+            >
+            <a
+              class="nav-link"
+              id="v-pills-messages-tab"
+              data-toggle="pill"
+              href="#v-pills-messages"
+              role="tab"
+              aria-controls="v-pills-messages"
+              aria-selected="false"
+              >Bài tập 7</a
+            >
+            <a
+              class="nav-link"
+              id="v-pills-settings-tab"
+              data-toggle="pill"
+              href="#v-pills-settings"
+              role="tab"
+              aria-controls="v-pills-settings"
+              aria-selected="false"
+              >Bài tập 8</a
+            >
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-9">
+          <div class="tab-content" id="v-pills-tabContent">
+            <!-- bài tập 5 -->
+            <div
+              class="tab-pane fade show active"
+              id="v-pills-home"
+              role="tabpanel"
+              aria-labelledby="v-pills-home-tab"
+            >
+              <div class="p-5 bg-primary">
+                <h1>Bài tập 5:</h1>
+                <h2>Tính ngày tháng năm</h2>
+                <div class="form-group">
+                  <label for="date">Ngày:</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="date"
+                    placeholder="Nhập Ngày"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="month">Tháng: </label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="month"
+                    placeholder="Nhập Tháng"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="years">Năm:</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="years"
+                    placeholder="Nhập Năm"
+                  />
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <button
+                      type="button"
+                      class="btn btn-success"
+                      id="btnYesterday"
+                    >
+                      Ngày Hôm Qua
+                    </button>
+                    <div class="mt-4 bg-white rounded">
+                      <p id="txtYesterday" class="py-2">
+                        <i class="fas fa-arrow-right"></i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <button type="button" class="btn btn-dark" id="btnNextDay">
+                      Ngày Tiếp Theo
+                    </button>
+                    <div class="mt-4 bg-white rounded">
+                      <p id="txtNextDay" class="py-2">
+                        <i class="fas fa-arrow-right"></i>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- bài tập 6 -->
+            <div
+              class="tab-pane fade"
+              id="v-pills-profile"
+              role="tabpanel"
+              aria-labelledby="v-pills-profile-tab"
+            >
+              <div class="p-5 bg-primary">
+                <h1 class="text-white">Bài tập 6:</h1>
+                <h2 class="text-white">Tính ngày</h2>
+                <div class="form-group">
+                  <label for="monthX">Tháng: </label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="monthX"
+                    placeholder="Nhập Tháng"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="yearsX">Năm:</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="yearsX"
+                    placeholder="Nhập Năm"
+                  />
+                </div>
+                <div class="">
+                  <button type="button" class="btn btn-dark" id="btnTotalDay">
+                    Tính
+                  </button>
+                  <div class="mt-4 bg-white rounded" style="width: 50%">
+                    <p id="txtTotalDay" class="py-2">
+                      <i class="fas fa-arrow-right"></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- bài tập 7 -->
+            <div
+              class="tab-pane fade"
+              id="v-pills-messages"
+              role="tabpanel"
+              aria-labelledby="v-pills-messages-tab"
+            >
+              <div class="p-5 bg-primary">
+                <h1 class="text-white">Bài tập 7:</h1>
+                <h2 class="text-white">Đọc Số</h2>
+                <div class="form-group">
+                  <label for="threeDigit">Số có ba chữ số:</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="threeDigit"
+                    placeholder="Nhập Số"
+                  />
+                </div>
+                <div class="">
+                  <button type="button" class="btn btn-dark" id="btnRead">
+                    Đọc Số
+                  </button>
+                  <div class="mt-4 bg-white rounded" style="width: 50%">
+                    <p id="txtRead" class="py-2">
+                      <i class="fas fa-arrow-right"></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- bài tập 8 -->
+            <div
+              class="tab-pane fade"
+              id="v-pills-settings"
+              role="tabpanel"
+              aria-labelledby="v-pills-settings-tab"
+            >
+              <div class="p-5 bg-primary">
+                <h1 class="text-white">Bài tập 8:</h1>
+                <h2 class="text-white">Tìm sinh viên xa trường nhất</h2>
+                <div class="form-group">
+                  <label for="name1">Sinh viên thứ nhất</label>
+                  <div class="row justify-content-between px-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name1"
+                      style="width: 30%"
+                      placeholder="Tên sinh viên"
+                    />
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="x1"
+                      style="width: 30%"
+                      placeholder="Tọa độ X"
+                    />
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="y1"
+                      style="width: 30%"
+                      placeholder="Tọa độ Y"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="name2">Sinh viên thứ hai</label>
+                  <div class="row justify-content-between px-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name2"
+                      style="width: 30%"
+                      placeholder="Tên sinh viên"
+                    />
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="x2"
+                      style="width: 30%"
+                      placeholder="Tọa độ X"
+                    />
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="y2"
+                      style="width: 30%"
+                      placeholder="Tọa độ Y"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="name3">Sinh viên thứ ba</label>
+                  <div class="row justify-content-between px-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name3"
+                      style="width: 30%"
+                      placeholder="Tên sinh viên"
+                    />
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="x3"
+                      style="width: 30%"
+                      placeholder="Tọa độ X"
+                    />
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="y3"
+                      style="width: 30%"
+                      placeholder="Tọa độ Y"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="SchoolX">Tọa độ của trường</label>
+                  <div class="row px-3">
+                    <input
+                      type="number"
+                      class="form-control mr-3"
+                      id="SchoolX"
+                      style="width: 30%"
+                      placeholder="Tọa độ X"
+                    />
+                    <input
+                      type="number"
+                      class="form-control ml-4"
+                      id="SchoolY"
+                      style="width: 30%"
+                      placeholder="Tọa độ Y"
+                    />
+                  </div>
+                </div>
+                <div class="">
+                  <button type="button" class="btn btn-dark" id="btnFind">
+                    Tìm
+                  </button>
+                  <div class="mt-4 bg-white rounded" style="width: 50%">
+                    <p id="txtFind" class="py-2">
+                      <i class="fas fa-arrow-right"></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- javascript -->
+    <!-- cơ bản -->
     <script src="./js/basic/BaiTap1.js"></script>
     <script src="./js/basic/Baitap2.js"></script>
     <script src="./js/basic/BaiTap3.js"></script>
     <script src="./js/basic/Baitap4.js"></script>
+    <!-- nâng cao -->
+    <script src="./js/advance/baiTap5.js"></script>
+    <script src="./js/advance/baiTap6.js"></script>
+    <script src="./js/advance/baiTap7.js"></script>
+    <script src="./js/advance/baiTap8.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script

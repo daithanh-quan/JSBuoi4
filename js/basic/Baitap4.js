@@ -28,7 +28,7 @@ document.getElementById('btnGuess').onclick = function () {
   if (edge1 === '' || edge2 === '' || edge3 === '') {
     txtGuess.style.color = '#dc3545cc'
     txtGuess.innerHTML = 'Vui lòng nhập giá trị!!'
-  } else if (edge1 > 0 || edge2 > 0 || edge3 > 0) {
+  } else if (edge1 < 0 || edge2 < 0 || edge3 < 0) {
     txtGuess.style.color = '#dc3545cc'
     txtGuess.innerHTML = 'Vui lòng nhập giá trị lớn hơn 0!!'
   } else if (edge1 === edge2 && edge1 === edge3) {
@@ -37,7 +37,11 @@ document.getElementById('btnGuess').onclick = function () {
   } else if (edge1 === edge2 && edge1 !== edge3) {
     txtGuess.style.color = '#21e539'
     txtGuess.innerHTML = 'Đây là tam giác cân'
-  } else if (edge1 ** 2 == edge2 ** 2 + edge3 ** 2) {
+  } else if (
+    edge1 ** 2 == edge2 ** 2 + edge3 ** 2 ||
+    edge2 ** 2 == edge1 ** 2 + edge3 ** 2 ||
+    edge3 ** 2 == edge1 ** 2 + edge2 ** 2
+  ) {
     txtGuess.style.color = '#21e539'
     txtGuess.innerHTML = 'Đây là tam giác vuông'
   } else {
