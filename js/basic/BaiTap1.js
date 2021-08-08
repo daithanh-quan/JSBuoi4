@@ -42,14 +42,14 @@ document.getElementById('btnRange').onclick = function () {
   } else if (num1 === '' || num2 === '' || num3 === '') {
     txt.style.color = '#9d1a27'
     txt.innerHTML = 'Vui lòng nhập số vào ô!!'
-  } else {
-    if (num2 > num3) {
+  } else if (num2 > num1 && num2 > num3) {
+    if (num1 > num3) {
       txt.style.color = '#21e539'
       txt.innerHTML =
         'Kết quả: ' +
-        parseInt(num1) +
-        '<' +
         parseInt(num3) +
+        '<' +
+        parseInt(num1) +
         '<' +
         parseInt(num2)
     } else {
@@ -58,7 +58,27 @@ document.getElementById('btnRange').onclick = function () {
         'Kết quả: ' +
         parseInt(num1) +
         '<' +
+        parseInt(num3) +
+        '<' +
+        parseInt(num2)
+    }
+  } else {
+    if (num2 > num1) {
+      txt.style.color = '#21e539'
+      txt.innerHTML =
+        'Kết quả: ' +
+        parseInt(num1) +
+        '<' +
         parseInt(num2) +
+        '<' +
+        parseInt(num3)
+    } else {
+      txt.style.color = '#21e539'
+      txt.innerHTML =
+        'Kết quả: ' +
+        parseInt(num2) +
+        '<' +
+        parseInt(num1) +
         '<' +
         parseInt(num3)
     }
