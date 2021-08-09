@@ -66,7 +66,10 @@ document.getElementById('btnRange').onclick = function () {
         '<' +
         parseInt(num2)
     }
-  } else {
+  } else if (
+    parseInt(num3) > parseInt(num2) &&
+    parseInt(num3) > parseInt(num1)
+  ) {
     if (parseInt(num2) > parseInt(num1)) {
       txt.style.color = '#21e539'
       txt.innerHTML =
@@ -86,5 +89,7 @@ document.getElementById('btnRange').onclick = function () {
         '<' +
         parseInt(num3)
     }
+  } else {
+    txt.innerHTML = ''
   }
 }
