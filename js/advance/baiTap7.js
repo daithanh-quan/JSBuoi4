@@ -62,37 +62,47 @@ document.getElementById('btnRead').onclick = function () {
         hundred = ''
     }
     switch (parseInt((number % 100) / 10)) {
+      case 0:
+        if (parseInt((number % 100) % 10) !== 0) {
+          dozen = 'lẻ '
+        } else {
+          dozen = ''
+        }
+        break
       case 1:
-        dozen = 'một'
+        dozen = 'mười '
         break
       case 2:
-        dozen = 'hai'
+        dozen = 'hai mươi '
         break
       case 3:
-        dozen = 'ba'
+        dozen = 'ba mươi '
         break
       case 4:
-        dozen = 'bốn'
+        dozen = 'bốn mươi '
         break
       case 5:
-        dozen = 'năm'
+        dozen = 'năm mươi '
         break
       case 6:
-        dozen = 'sáu'
+        dozen = 'sáu mươi '
         break
       case 7:
-        dozen = 'bảy'
+        dozen = 'bảy mươi '
         break
       case 8:
-        dozen = 'tám'
+        dozen = 'tám mươi '
         break
       case 9:
-        dozen = 'chín'
+        dozen = 'chín mươi '
         break
       default:
         dozen = ''
     }
     switch (parseInt((number % 100) % 10)) {
+      case 0:
+        unit = ''
+        break
       case 1:
         unit = 'một'
         break
@@ -124,6 +134,6 @@ document.getElementById('btnRead').onclick = function () {
         unit = ''
     }
     txtRead.style.color = '#21e539'
-    txtRead.innerHTML = hundred + ' trăm ' + dozen + ' mươi ' + unit
+    txtRead.innerHTML = hundred + ' trăm ' + dozen + unit
   }
 }

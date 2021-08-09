@@ -23,10 +23,12 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+    <!-- css -->
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
     <!-- basic -->
-    <div class="total py-3">
+    <div class="basic py-3">
       <h1 class="text-center py-2">Bài tập cơ bản</h1>
       <div class="container">
         <div class="row">
@@ -88,9 +90,21 @@
                 role="tabpanel"
                 aria-labelledby="v-pills-home-tab"
               >
-                <div class="py-5 px-5 bg-primary">
-                  <h1>Bài tập 1:</h1>
-                  <h2>Sắp xếp các số nguyên</h2>
+                <div
+                  class="py-5 px-5"
+                  style="
+                    background: url(./img/xanh.jpg);
+                    object-fit: cover;
+                    border-radius: 10px;
+                  "
+                >
+                  <h2 class="text-white text-center">
+                    <i
+                      class="fas fa-sort-numeric-down"
+                      style="color: #1da0fda8"
+                    ></i>
+                    Sắp xếp các số nguyên
+                  </h2>
                   <div class="form-group">
                     <label for="number1">Số 1:</label>
                     <input
@@ -135,9 +149,18 @@
                 role="tabpanel"
                 aria-labelledby="v-pills-profile-tab"
               >
-                <div class="py-5 px-5 bg-primary">
-                  <h1 class="text-white">Bài tập 2:</h1>
-                  <h2 class="text-white">Chào hỏi thành viên trong gia đình</h2>
+                <div
+                  class="py-5 px-5"
+                  style="
+                    background: url(./img/xanh.jpg);
+                    object-fit: cover;
+                    border-radius: 10px;
+                  "
+                >
+                  <h2 class="text-white text-center">
+                    <i class="fas fa-home" style="color: #1da0fda8"></i>
+                    Chào hỏi thành viên trong gia đình
+                  </h2>
                   <label for="people">Chọn người trong gia đình : </label>
                   <select id="select" style="width: 100%; margin: 10px 0">
                     <option id="people" value="" selected>
@@ -165,9 +188,18 @@
                 role="tabpanel"
                 aria-labelledby="v-pills-messages-tab"
               >
-                <div class="mt-2 px-5 py-5 bg-primary">
-                  <h1>Bài tập 3:</h1>
-                  <h2>Tìm số lượng chẵn, lẻ</h2>
+                <div
+                  class="mt-2 px-5 py-5"
+                  style="
+                    background: url(./img/xanh.jpg);
+                    object-fit: cover;
+                    border-radius: 10px;
+                  "
+                >
+                  <h2 class="text-white text-center">
+                    <i class="fas fa-book" style="color: #1da0fda8"></i>
+                    Tìm số lượng chẵn, lẻ
+                  </h2>
                   <div class="form-group">
                     <label for="number4">Số 1:</label>
                     <input
@@ -212,9 +244,18 @@
                 role="tabpanel"
                 aria-labelledby="v-pills-settings-tab"
               >
-                <div class="mt-2 px-5 py-5 bg-primary">
-                  <h1>Bài tập 4:</h1>
-                  <h2>Dự Đoán</h2>
+                <div
+                  class="mt-2 px-5 py-5"
+                  style="
+                    background: url(./img/xanh.jpg);
+                    object-fit: cover;
+                    border-radius: 10px;
+                  "
+                >
+                  <h2 class="text-white text-center">
+                    <i class="fab fa-500px" style="color: #1da0fda8"></i> Dự
+                    Đoán
+                  </h2>
                   <div class="form-group">
                     <label for="edge1">Độ dài cạnh 1:</label>
                     <input
@@ -258,7 +299,7 @@
       </div>
     </div>
     <!-- advance -->
-    <div class="container py-5">
+    <div class="advance container py-5">
       <h1 class="text-center py-2">Bài Tập Nâng Cao</h1>
       <div class="row">
         <div class="col-sm-12 col-lg-3">
@@ -319,9 +360,18 @@
               role="tabpanel"
               aria-labelledby="v-pills-home-tab"
             >
-              <div class="p-5 bg-primary">
-                <h1>Bài tập 5:</h1>
-                <h2>Tính ngày tháng năm</h2>
+              <div
+                class="p-5"
+                style="
+                  background: url(./img/bien1.jpg) no-repeat center;
+                  object-fit: cover;
+                  border-radius: 10px;
+                "
+              >
+                <h2 class="text-center" style="color: #ff9005">
+                  <i class="far fa-calendar-alt" style="color: #ff9005"></i>
+                  Tính ngày tháng năm
+                </h2>
                 <div class="form-group">
                   <label for="date">Ngày:</label>
                   <input
@@ -384,9 +434,18 @@
               role="tabpanel"
               aria-labelledby="v-pills-profile-tab"
             >
-              <div class="p-5 bg-primary">
-                <h1 class="text-white">Bài tập 6:</h1>
-                <h2 class="text-white">Tính ngày</h2>
+              <div
+                class="p-5"
+                style="
+                  background: url(./img/bien1.jpg) no-repeat center;
+                  object-fit: cover;
+                  border-radius: 10px;
+                "
+              >
+                <h2 class="text-center" style="color: #ff9005">
+                  <i class="far fa-clock" style="color: #ff9005"></i>
+                  Tính ngày
+                </h2>
                 <div class="form-group">
                   <label for="monthX">Tháng: </label>
                   <input
@@ -424,9 +483,18 @@
               role="tabpanel"
               aria-labelledby="v-pills-messages-tab"
             >
-              <div class="p-5 bg-primary">
-                <h1 class="text-white">Bài tập 7:</h1>
-                <h2 class="text-white">Đọc Số</h2>
+              <div
+                class="p-5"
+                style="
+                  background: url(./img/bien1.jpg) no-repeat center;
+                  object-fit: cover;
+                  border-radius: 10px;
+                "
+              >
+                <h2 class="text-center" style="color: #ff9005">
+                  <i class="fas fa-book-reader" style="color: #ff9005"></i>
+                  Đọc Số
+                </h2>
                 <div class="form-group">
                   <label for="threeDigit">Số có ba chữ số:</label>
                   <input
@@ -455,9 +523,18 @@
               role="tabpanel"
               aria-labelledby="v-pills-settings-tab"
             >
-              <div class="p-5 bg-primary">
-                <h1 class="text-white">Bài tập 8:</h1>
-                <h2 class="text-white">Tìm sinh viên xa trường nhất</h2>
+              <div
+                class="p-5"
+                style="
+                  background: url(./img/bien1.jpg) no-repeat center;
+                  object-fit: cover;
+                  border-radius: 10px;
+                "
+              >
+                <h2 class="text-center" style="color: #ff9005">
+                  <i class="fas fa-users" style="color: #ff9005"></i> Tìm sinh
+                  viên xa trường nhất
+                </h2>
                 <div class="form-group">
                   <label for="name1">Sinh viên thứ nhất</label>
                   <div class="row justify-content-between px-3">

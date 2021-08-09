@@ -1,0 +1,15 @@
+/* sửa active bootstrap */
+/* basic */
+.basic .nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: #084d97d6;
+}
+.basic a,
+.advance a {
+  color: black;
+}
+/* advance */
+.advance .nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: #03a9f4;
+}

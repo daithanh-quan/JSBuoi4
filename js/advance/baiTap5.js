@@ -45,9 +45,9 @@ document.getElementById('btnNextDay').onclick = function () {
     txtNextDay.innerHTML = 'Vui lòng nhập lại giá trị!!'
   }
   // kiểm tra người dùng là tháng này nhuận
-  else if (date > 28 && month == 2) {
+  else if (date > 29 && month == 2) {
     txtNextDay.style.color = '#dc3545cc'
-    txtNextDay.innerHTML = 'Tháng này chỉ có 28 ngày, nhập lại giá trị!!'
+    txtNextDay.innerHTML = 'Tháng này chỉ có 29 ngày, nhập lại giá trị!!'
   }
   // kiểm tra người dùng  những tháng này chỉ có 30 ngày
   else if (
