@@ -5,13 +5,36 @@
  * B1: tạo và lấy giá trị người dùng nhập
  * Num1,Num2,Num3
  * B2: So sánh các giá trị với nhau
- * TH1: num1 > num2 && num1 > num3 ( tiếp tục so sánh num2 vs num3) => num2 < num3 (num2 , num3, num1) ngược lại (num3, num2 ,num1)
- * TH2:   num2 > num1 && num2 > num3 ( tiếp tục so sánh num1 vs num3) => num1 < num3 (num1 , num3, num2) ngược lại (num3, num1 ,num2)
- * TH3: num1, num2, num3 đều rỗng thì xuất thông báo
- * Ngược lại (tiếp tục so sánh num2 vs num3) => num2 < num3 (num1, num2, num3) ngược lại (num1, num3, num2)
+ * TH1: num1, num2, num3 đều rỗng thì xuất thông báo
+ * TH2: num1 >= num2 && num1 >= num3 ( tiếp tục so sánh num2 vs num3) => num2 < num3 (num2 , num3, num1) ngược lại (num3, num2 ,num1)
+ * TH3: num2 >= num1 && num2 >= num3 ( tiếp tục so sánh num1 vs num3) => num1 < num3 (num1 , num3, num2) ngược lại (num3, num1 ,num2)
+ * TH4: num3 >= num1 && num3 >= num2 (tiếp tục so sánh num1 vs num2) => num2 < num3 (num1, num2, num3) ngược lại (num1, num3, num2)
+ *B3: từ các điều kiện và xuất kết quả
  * Khối 3:  outputs
  * số nguyên tăng dần
  */
+// hàm check giá trị chung
+function Result(value1, value2, value3, message) {
+  if (parseInt(value1) >= parseInt(value2)) {
+    message.style.color = '#21e539'
+    message.innerHTML =
+      'Kết quả: ' +
+      parseInt(value2) +
+      '<' +
+      parseInt(value1) +
+      '<' +
+      parseInt(value3)
+  } else {
+    message.style.color = '#21e539'
+    message.innerHTML =
+      'Kết quả: ' +
+      parseInt(value1) +
+      '<' +
+      parseInt(value2) +
+      '<' +
+      parseInt(value3)
+  }
+}
 
 document.getElementById('btnRange').onclick = function () {
   //tạo và lấy giá trị
@@ -20,109 +43,24 @@ document.getElementById('btnRange').onclick = function () {
   var num3 = document.getElementById('number3').value
   // in kết quả
   var txt = document.getElementById('txtRange')
-  if (parseInt(num1) > parseInt(num2) && parseInt(num1) > parseInt(num3)) {
-    if (parseInt(num2) > parseInt(num3)) {
-      txt.style.color = '#21e539'
-      txt.innerHTML =
-        'Kết quả: ' +
-        parseInt(num3) +
-        '<' +
-        parseInt(num2) +
-        '<' +
-        parseInt(num1)
-    } else if (parseInt(num2) == parseInt(num3)) {
-      txt.style.color = '#21e539'
-      txt.innerHTML =
-        'Kết quả: ' +
-        parseInt(num3) +
-        '<' +
-        parseInt(num2) +
-        '<' +
-        parseInt(num1)
-    } else {
-      txt.style.color = '#21e539'
-      txt.innerHTML =
-        'Kết quả: ' +
-        parseInt(num2) +
-        '<' +
-        parseInt(num3) +
-        '<' +
-        parseInt(num1)
-    }
-  } else if (num1 === '' || num2 === '' || num3 === '') {
+  if (num1 === '' || num2 === '' || num3 === '') {
     txt.style.color = '#9d1a27'
     txt.innerHTML = 'Vui lòng nhập số vào ô!!'
   } else if (
-    parseInt(num2) > parseInt(num1) &&
-    parseInt(num2) > parseInt(num3)
+    parseInt(num1) >= parseInt(num2) &&
+    parseInt(num1) >= parseInt(num3)
   ) {
-    if (parseInt(num1) > parseInt(num3)) {
-      txt.style.color = '#21e539'
-      txt.innerHTML =
-        'Kết quả: ' +
-        parseInt(num3) +
-        '<' +
-        parseInt(num1) +
-        '<' +
-        parseInt(num2)
-    } else if (parseInt(num1) == parseInt(num3)) {
-      txt.style.color = '#21e539'
-      txt.innerHTML =
-        'Kết quả: ' +
-        parseInt(num3) +
-        '<' +
-        parseInt(num1) +
-        '<' +
-        parseInt(num2)
-    } else {
-      txt.style.color = '#21e539'
-      txt.innerHTML =
-        'Kết quả: ' +
-        parseInt(num1) +
-        '<' +
-        parseInt(num3) +
-        '<' +
-        parseInt(num2)
-    }
+    Result(num2, num3, num1, txt)
   } else if (
-    parseInt(num3) > parseInt(num2) &&
-    parseInt(num3) > parseInt(num1)
+    parseInt(num2) >= parseInt(num1) &&
+    parseInt(num2) >= parseInt(num3)
   ) {
-    if (parseInt(num2) > parseInt(num1)) {
-      txt.style.color = '#21e539'
-      txt.innerHTML =
-        'Kết quả: ' +
-        parseInt(num1) +
-        '<' +
-        parseInt(num2) +
-        '<' +
-        parseInt(num3)
-    } else if (parseInt(num2) == parseInt(num1)) {
-      txt.style.color = '#21e539'
-      txt.innerHTML =
-        'Kết quả: ' +
-        parseInt(num1) +
-        '<' +
-        parseInt(num2) +
-        '<' +
-        parseInt(num3)
-    } else {
-      txt.style.color = '#21e539'
-      txt.innerHTML =
-        'Kết quả: ' +
-        parseInt(num2) +
-        '<' +
-        parseInt(num1) +
-        '<' +
-        parseInt(num3)
-    }
+    Result(num1, num3, num2, txt)
   } else if (
-    parseInt(num3) == parseInt(num2) &&
-    parseInt(num3) == parseInt(num1)
+    parseInt(num3) >= parseInt(num2) &&
+    parseInt(num3) >= parseInt(num1)
   ) {
-    txt.style.color = '#21e539'
-    txt.innerHTML =
-      'Kết quả: ' + parseInt(num2) + '<' + parseInt(num1) + '<' + parseInt(num3)
+    Result(num2, num1, num3, txt)
   } else {
     txt.innerHTML = ''
   }
