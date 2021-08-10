@@ -133,6 +133,7 @@ function checkValueToPrintResult(date, month, years, txt, result) {
     txt.style.color = '#dc3545cc'
     txt.innerHTML = 'Tháng này chỉ có 31 ngày, nhập lại giá trị!!'
   } else {
+    txt.style.color = '#21e539'
     result
   }
 }
