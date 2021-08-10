@@ -34,7 +34,7 @@ document.getElementById('btnGuess').onclick = function () {
   } else if (edge1 === edge2 && edge1 === edge3) {
     txtGuess.style.color = '#21e539'
     txtGuess.innerHTML = 'Đây là tam giác đều'
-  } else if (edge1 === edge2 && edge1 !== edge3) {
+  } else if (edge1 === edge2 || edge1 === edge3 || edge2 === edge3) {
     txtGuess.style.color = '#21e539'
     txtGuess.innerHTML = 'Đây là tam giác cân'
   } else if (

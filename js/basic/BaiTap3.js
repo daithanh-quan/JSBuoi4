@@ -13,12 +13,12 @@
  * Khối 3: outputs
  * Số lượng số chẵn, số lượng số lẻ
  */
-
 document.getElementById('btnResult').onclick = function () {
   // tạo biến và lấy giá trị
   var num1 = document.getElementById('number4').value
   var num2 = document.getElementById('number5').value
   var num3 = document.getElementById('number6').value
+
   // tạo biến chẵn, lẻ
   var even = 0
   var odd = 0
@@ -46,6 +46,6 @@ document.getElementById('btnResult').onclick = function () {
   } else {
     result.style.color = '#21e539'
     result.innerHTML =
-      'Kết quả: ' + 'Có ' + even + ' Số chẵn ,' + odd + ' số lẽ'
+      'Kết quả: ' + 'Có ' + even + ' số chẵn ,' + odd + ' số lẽ'
   }
 }

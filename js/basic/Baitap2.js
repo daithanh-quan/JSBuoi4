@@ -11,6 +11,7 @@
  * Khối 3: outputs
  * Chào thành viên trong gia đình
  */
+// hàm xuất kết quả
 
 document.getElementById('btnHi').onclick = function () {
   // tạo và

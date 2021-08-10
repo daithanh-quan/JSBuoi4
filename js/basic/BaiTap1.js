@@ -13,7 +13,7 @@
  * Khối 3:  outputs
  * số nguyên tăng dần
  */
-// hàm check giá trị chung
+// hàm check giá trị chung và in kết quả
 function Result(value1, value2, value3, message) {
   if (parseInt(value1) >= parseInt(value2)) {
     message.style.color = '#21e539'
@@ -35,6 +35,10 @@ function Result(value1, value2, value3, message) {
       parseInt(value3)
   }
 }
+// hàm check lấy số lớn nhất
+function maxNumber(num1, num2, num3) {
+  return parseInt(num1) >= parseInt(num2) && parseInt(num1) >= parseInt(num3)
+}
 
 document.getElementById('btnRange').onclick = function () {
   //tạo và lấy giá trị
@@ -46,20 +50,11 @@ document.getElementById('btnRange').onclick = function () {
   if (num1 === '' || num2 === '' || num3 === '') {
     txt.style.color = '#9d1a27'
     txt.innerHTML = 'Vui lòng nhập số vào ô!!'
-  } else if (
-    parseInt(num1) >= parseInt(num2) &&
-    parseInt(num1) >= parseInt(num3)
-  ) {
+  } else if (maxNumber(num1, num2, num3)) {
     Result(num2, num3, num1, txt)
-  } else if (
-    parseInt(num2) >= parseInt(num1) &&
-    parseInt(num2) >= parseInt(num3)
-  ) {
+  } else if (maxNumber(num2, num1, num3)) {
     Result(num1, num3, num2, txt)
-  } else if (
-    parseInt(num3) >= parseInt(num2) &&
-    parseInt(num3) >= parseInt(num1)
-  ) {
+  } else if (maxNumber(num3, num2, num1)) {
     Result(num2, num1, num3, txt)
   } else {
     txt.innerHTML = ''

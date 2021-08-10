@@ -17,7 +17,7 @@
  * Đọc số
  */
 // hàm kiểm tra các giá trị
-function checkValue(value) {
+function checkValue(value, five) {
   var result = ''
   switch (value) {
     case 0:
@@ -36,7 +36,7 @@ function checkValue(value) {
       result = 'Bốn'
       break
     case 5:
-      result = 'Năm'
+      result = five
       break
     case 6:
       result = 'Sáu'
@@ -69,7 +69,7 @@ document.getElementById('btnRead').onclick = function () {
     txtRead.innerHTML = 'Vui lòng nhập vào ba chữ số!!'
   } else {
     // kiểm tra hàng trăm
-    hundred = checkValue(parseInt(number / 100))
+    hundred = checkValue(parseInt(number / 100), 'Năm')
     // kiểm tra hàng chục
     switch (parseInt((number % 100) / 10)) {
       case 0:
@@ -110,7 +110,7 @@ document.getElementById('btnRead').onclick = function () {
         dozen = ''
     }
     // kiểm tra hàng đơn vị
-    unit = checkValue(parseInt((number % 100) % 10)).toLocaleLowerCase()
+    unit = checkValue(parseInt((number % 100) % 10), 'Lăm').toLocaleLowerCase()
     txtRead.style.color = '#21e539'
     txtRead.innerHTML = hundred + ' trăm ' + dozen + unit
   }
