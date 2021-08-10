@@ -17,38 +17,38 @@
  * Đọc số
  */
 // hàm kiểm tra các giá trị
-function checkValue(value, five) {
+function checkValue(value1, zero, one, five, name) {
   var result = ''
-  switch (value) {
+  switch (value1) {
     case 0:
-      result = ''
+      result = zero
       break
     case 1:
-      result = 'Một'
+      result = one
       break
     case 2:
-      result = 'Hai'
+      result = 'Hai' + name
       break
     case 3:
-      result = 'Ba'
+      result = 'Ba' + name
       break
     case 4:
-      result = 'Bốn'
+      result = 'Bốn' + name
       break
     case 5:
-      result = five
+      result = five + name
       break
     case 6:
-      result = 'Sáu'
+      result = 'Sáu' + name
       break
     case 7:
-      result = 'Bảy'
+      result = 'Bảy' + name
       break
     case 8:
-      result = 'Tám'
+      result = 'Tám' + name
       break
     case 9:
-      result = 'Chín'
+      result = 'Chín' + name
       break
     default:
       result = ''
@@ -69,48 +69,23 @@ document.getElementById('btnRead').onclick = function () {
     txtRead.innerHTML = 'Vui lòng nhập vào ba chữ số!!'
   } else {
     // kiểm tra hàng trăm
-    hundred = checkValue(parseInt(number / 100), 'Năm')
+    hundred = checkValue(parseInt(number / 100), '', 'Một', 'Năm', '')
     // kiểm tra hàng chục
-    switch (parseInt((number % 100) / 10)) {
-      case 0:
-        if (parseInt((number % 100) % 10) !== 0) {
-          dozen = 'lẻ '
-        } else {
-          dozen = ''
-        }
-        break
-      case 1:
-        dozen = 'mười '
-        break
-      case 2:
-        dozen = 'hai mươi '
-        break
-      case 3:
-        dozen = 'ba mươi '
-        break
-      case 4:
-        dozen = 'bốn mươi '
-        break
-      case 5:
-        dozen = 'năm mươi '
-        break
-      case 6:
-        dozen = 'sáu mươi '
-        break
-      case 7:
-        dozen = 'bảy mươi '
-        break
-      case 8:
-        dozen = 'tám mươi '
-        break
-      case 9:
-        dozen = 'chín mươi '
-        break
-      default:
-        dozen = ''
-    }
+    dozen = checkValue(
+      parseInt((number % 100) / 10),
+      ' lẻ ',
+      ' mười ',
+      'Năm',
+      ' mươi '
+    ).toLowerCase()
     // kiểm tra hàng đơn vị
-    unit = checkValue(parseInt((number % 100) % 10), 'Lăm').toLocaleLowerCase()
+    unit = checkValue(
+      parseInt((number % 100) % 10),
+      '',
+      'một',
+      'lăm',
+      ''
+    ).toLowerCase()
     txtRead.style.color = '#21e539'
     txtRead.innerHTML = hundred + ' trăm ' + dozen + unit
   }

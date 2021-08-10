@@ -52,14 +52,13 @@ var nextDay = function (date, month, years, txt) {
   } else {
     date++
   }
-  txt.style.color = '#21e539'
-  txt.innerHTML =
+  return (txt.innerHTML =
     'Ngày/Tháng/Năm: ' +
     parseInt(date) +
     '/' +
     parseInt(month) +
     '/' +
-    parseInt(years)
+    parseInt(years))
 }
 // hàm kiểm tra để tính ngày hôm qua
 var yesterday = function (date, month, years, txt) {
@@ -85,14 +84,13 @@ var yesterday = function (date, month, years, txt) {
   } else {
     date--
   }
-  txt.style.color = '#21e539'
-  txt.innerHTML =
+  return (txt.innerHTML =
     'Ngày/Tháng/Năm: ' +
     parseInt(date) +
     '/' +
     parseInt(month) +
     '/' +
-    parseInt(years)
+    parseInt(years))
 }
 // hàm kiểm tra giá trị người dùng nhập vào và xuất kết quả
 function checkValueToPrintResult(date, month, years, txt, result) {

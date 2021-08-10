@@ -16,23 +16,21 @@
 // hàm check giá trị chung và in kết quả
 function Result(value1, value2, value3, message) {
   if (parseInt(value1) >= parseInt(value2)) {
-    message.style.color = '#21e539'
-    message.innerHTML =
+    return (message.innerHTML =
       'Kết quả: ' +
       parseInt(value2) +
       '<' +
       parseInt(value1) +
       '<' +
-      parseInt(value3)
+      parseInt(value3))
   } else {
-    message.style.color = '#21e539'
-    message.innerHTML =
+    return (message.innerHTML =
       'Kết quả: ' +
       parseInt(value1) +
       '<' +
       parseInt(value2) +
       '<' +
-      parseInt(value3)
+      parseInt(value3))
   }
 }
 // hàm check lấy số lớn nhất
