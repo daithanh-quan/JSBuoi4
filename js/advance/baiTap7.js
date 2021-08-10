@@ -10,13 +10,51 @@
  * B2: kiểm tra giá trị người dùng đã nhập đúng chưa =>  xuất kết quả nhắc nhở
  * ngược lại: nếu đã nhập đúng
  * kiểm tra switch(number / 100){case1,2,3,4,5,6,7,8,9.}=> hundred ="Một", "Hai"....
- *kiểm tra switch((number % 100)/10){case1,2,3,4,5,6,7,8,9.}=> dozen = "Một", "Hai"...
- *kiểm tra switch((number % 100)%10 ){case1,2,3,4,5,6,7,8,9} => unit = "Một", " Hai" ...
+ *kiểm tra switch((number % 100)/10){case0,1,2,3,4,5,6,7,8,9.}=> dozen ="", "Một", "Hai"...
+ *kiểm tra switch((number % 100)%10 ){case0,1,2,3,4,5,6,7,8,9} => unit ="", "Một", " Hai" ...
  *B3: Xuất kết quả
  * Khối 3: outputs
  * Đọc số
  */
-
+// hàm kiểm tra các giá trị
+function checkValue(value) {
+  var result = ''
+  switch (value) {
+    case 0:
+      result = ''
+      break
+    case 1:
+      result = 'Một'
+      break
+    case 2:
+      result = 'Hai'
+      break
+    case 3:
+      result = 'Ba'
+      break
+    case 4:
+      result = 'Bốn'
+      break
+    case 5:
+      result = 'Năm'
+      break
+    case 6:
+      result = 'Sáu'
+      break
+    case 7:
+      result = 'Bảy'
+      break
+    case 8:
+      result = 'Tám'
+      break
+    case 9:
+      result = 'Chín'
+      break
+    default:
+      result = ''
+  }
+  return result
+}
 document.getElementById('btnRead').onclick = function () {
   // tạo biến và lấy giá trị người dùng nhập
   var number = document.getElementById('threeDigit').value
@@ -30,37 +68,9 @@ document.getElementById('btnRead').onclick = function () {
     txtRead.style.color = '#dc3545cc'
     txtRead.innerHTML = 'Vui lòng nhập vào ba chữ số!!'
   } else {
-    switch (parseInt(number / 100)) {
-      case 1:
-        hundred = 'Một'
-        break
-      case 2:
-        hundred = 'Hai'
-        break
-      case 3:
-        hundred = 'Ba'
-        break
-      case 4:
-        hundred = 'Bốn'
-        break
-      case 5:
-        hundred = 'Năm'
-        break
-      case 6:
-        hundred = 'Sáu'
-        break
-      case 7:
-        hundred = 'Bảy'
-        break
-      case 8:
-        hundred = 'Tám'
-        break
-      case 9:
-        hundred = 'Chín'
-        break
-      default:
-        hundred = ''
-    }
+    // kiểm tra hàng trăm
+    hundred = checkValue(parseInt(number / 100))
+    // kiểm tra hàng chục
     switch (parseInt((number % 100) / 10)) {
       case 0:
         if (parseInt((number % 100) % 10) !== 0) {
@@ -99,40 +109,8 @@ document.getElementById('btnRead').onclick = function () {
       default:
         dozen = ''
     }
-    switch (parseInt((number % 100) % 10)) {
-      case 0:
-        unit = ''
-        break
-      case 1:
-        unit = 'một'
-        break
-      case 2:
-        unit = 'hai'
-        break
-      case 3:
-        unit = 'Ba'
-        break
-      case 4:
-        unit = 'bốn'
-        break
-      case 5:
-        unit = 'năm'
-        break
-      case 6:
-        unit = 'sáu'
-        break
-      case 7:
-        unit = 'bảy'
-        break
-      case 8:
-        unit = 'tám'
-        break
-      case 9:
-        unit = 'chín'
-        break
-      default:
-        unit = ''
-    }
+    // kiểm tra hàng đơn vị
+    unit = checkValue(parseInt((number % 100) % 10)).toLocaleLowerCase()
     txtRead.style.color = '#21e539'
     txtRead.innerHTML = hundred + ' trăm ' + dozen + unit
   }

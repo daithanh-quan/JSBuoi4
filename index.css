@@ -13,3 +13,17 @@
 .nav-pills .show > .nav-link {
   background-color: #03a9f4;
 }
+.advance .form-control {
+  background-color: #ffffff9c;
+}
+.advance .rounded {
+  background-color: #ffffffe8;
+}
+/* responsive */
+@media screen and (max-width: 700px) {
+  body .flex-column {
+    flex-direction: row !important;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+}

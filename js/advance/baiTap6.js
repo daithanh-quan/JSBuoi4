@@ -28,6 +28,7 @@ document.getElementById('btnTotalDay').onclick = function () {
     parseInt(month) > 12 ||
     month === '' ||
     parseInt(years) < 0 ||
+    years === '' ||
     month === ''
   ) {
     txtTotalDay.style.color = '#dc3545cc'
